@@ -1,3 +1,9 @@
+/* black - #001514
+white - #FBFFFE
+red - #6B0504
+orange - #A3320B
+yellow - E6AF2E */
+
 html, body {
     margin: 0;
     padding: 0;
@@ -10,4 +16,38 @@ html, body {
     width: 300px;
     min-width: 290px;
     height: 100%;
+    background-color: rgb(73, 73, 73);
+    color: rgb(255, 255, 255);
+    box-sizing: border-box;
 }
+
+#navbar header {
+    font-size: 25px;
+    margin: 30px 30px 0;
+}
+
+#navbar ul {
+    list-style: none;
+    margin-top: 25px;
+    padding: 0;
+}
+
+#navbar li {
+    background-color: lightgray;
+    display: inline-block;
+    width: 100%;
+    padding: 15px 30px;
+    box-sizing: border-box;
+}
+
+.nav-link {
+    style: none;
+    color:  rgb(255, 255, 255);
+    text-decoration: none;
+}
+
+#main-doc {
+    position: absolute;
+    margin-left: 310px;
+    padding: 20px;
+  }
