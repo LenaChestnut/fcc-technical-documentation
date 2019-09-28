@@ -138,16 +138,16 @@ code {
     position: fixed;
     width: 100%;
     height: auto;
-    padding: 30px 0 30px 40px;
     z-index: 2;
   }
 
   .navbar-container label {
-    display: block;
+    display: inline-block;
     color: #6B0504;
     font-size: 24px;
     z-index: 3;
     opacity: 1;
+    margin: 30px auto 30px 40px;
   }
 
   #navbar {
