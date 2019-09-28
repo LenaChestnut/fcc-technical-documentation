@@ -2,52 +2,185 @@
 white - #FBFFFE
 red - #6B0504
 orange - #A3320B
-yellow - E6AF2E */
+yellow - #E6AF2E */
 
 html, body {
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
+  background-color: #FBFFFE;
+  font-family: 'Open Sans', Arial, sans-serif;
+    color:#001514;
 }
 
 #navbar {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 300px;
-    min-width: 290px;
-    height: 100%;
-    background-color: rgb(73, 73, 73);
-    color: rgb(255, 255, 255);
-    box-sizing: border-box;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 300px;
+  min-width: 290px;
+  height: 100%;
+  background-color:#001514;
+  color:#FBFFFE;
+  box-sizing: border-box;
+  z-index: 1;
+}
+
+/* Making a collapsible navbar */
+
+.navbar-container label, #navbar-collapse {
+  display: none;
+  z-index: 2;
+}
+
+.navbar-container label {
+  cursor: pointer;
 }
 
 #navbar header {
-    font-size: 25px;
-    margin: 30px 30px 0;
+  font-size: 25px;
+  margin: 30px 30px 0;
 }
 
 #navbar ul {
-    list-style: none;
-    margin-top: 25px;
-    padding: 0;
+  list-style: none;
+  margin-top: 25px;
+  padding: 0;
 }
 
 #navbar li {
-    background-color: lightgray;
-    display: inline-block;
-    width: 100%;
-    padding: 15px 30px;
-    box-sizing: border-box;
+  display: inline-block;
+  width: 100%;
+  padding: 15px 30px;
+  box-sizing: border-box;
+}
+
+#navbar li:hover {
+  background-color: #A3320B;
 }
 
 .nav-link {
-    style: none;
-    color:  rgb(255, 255, 255);
-    text-decoration: none;
+  list-style: none;
+  color: #FBFFFE;
+  text-decoration: none;
 }
 
 #main-doc {
-    position: absolute;
-    margin-left: 310px;
-    padding: 20px;
+  position: absolute;
+  margin-left: 310px;
+  padding: 20px 40px 40px 30px;
   }
+
+main header {
+  font-size: 25px;
+  color: #A3320B;
+  margin-top: 0.8em;
+  padding-top: 0.8em;
+}
+
+.main-section p {
+  margin: 1em 1em 0 0;
+}
+
+.main-section p:first-of-type {
+  margin-top: 1.4em;
+}
+
+pre {
+  white-space: normal;
+}
+
+code {
+  display: block;
+  white-space: pre-line;
+  text-align: left;
+  line-height: 1.8;
+  margin-left: 2em;
+}
+
+.inline-code {
+  display: inline;
+  white-space: normal;
+  margin-left: 0;
+}
+
+.definition {
+  font-weight: 700;
+}
+
+.main-section ul {
+  list-style: circle;
+}
+
+.main-section li {
+  margin-top: 1em;
+}
+
+@media screen and (max-width: 850px) {
+  #navbar {
+    width: 220px;
+    min-width: 220px;
+    font-size: 14px;
+    box-sizing: border-box;
+  }
+
+  #navbar header {
+    font-size: 20px;
+    margin: 30px 30px 0;
+  }
+
+  #main-doc {
+    position: absolute;
+    margin-left: 220px;
+    padding: 20px 40px 40px 30px;
+    }
+
+}
+
+@media screen and (max-width: 650px) {
+  
+  .navbar-container label {
+    display: inline-block;
+    cursor: pointer;
+    color: #6B0504;
+    font-size: 24px;
+    position: relative;
+    padding: 0;
+    margin: 40px 40px 10px;
+  }
+
+  input:checked + label {
+    color:  #FBFFFE;
+    position: fixed;
+    transform: translateY(-120%);
+  }
+
+  #navbar {
+    max-height: 0;
+    overflow: hidden;
+    position: fixed;
+  }
+
+  /* Toggle navbar */
+
+  input:checked ~ #navbar {
+      max-height: 100%;
+  }
+
+  #navbar header {
+    margin: 100px 30px 0 40px;
+  }
+
+  #navbar li {
+    padding-left: 40px;
+  }
+
+  #main-doc {
+    position: relative;
+    padding: 0;
+    margin: 30px 40px;
+    min-width: 300px;
+  }
+}
+
+/* make nav with collapsed menu fixed */
+/* https://codeburst.io/how-to-make-a-collapsible-menu-using-only-css-a1cd805b1390 */
