@@ -3,7 +3,8 @@ html, body {
   padding: 0;
   background-color: #FBFFFE;
   font-family: 'Open Sans', Arial, sans-serif;
-    color:#001514;
+  color:#001514;
+  scroll-behavior: smooth;
 }
 
 #navbar {
